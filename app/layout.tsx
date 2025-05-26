@@ -1,7 +1,8 @@
 // app/layout.tsx
 import "../app/styles/globals.css";
 import { Inter } from "next/font/google";
-import { Layout } from "./components/layout";
+import { Header } from "./components/header";
+import { Footer } from "./components/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,9 +19,16 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className={`${inter.className} bg-pink-100 min-h-screen`}>
-        <Layout>
-          {children}
-        </Layout> 
+        <div className={`relative 
+        flex 
+        flex-col
+        ${inter.className}
+        min-h-screen
+        `}>
+          <Header />
+            {children}
+          <Footer />
+        </div>
       </body>
     </html>
   );
