@@ -1,6 +1,7 @@
 // app/layout.tsx
 import "../app/styles/globals.css";
 import { Inter } from "next/font/google";
+import { Layout } from "./components/layout";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,7 +18,9 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className={`${inter.className} bg-pink-100 min-h-screen`}>
-        {children}
+        <Layout>
+          {children}
+        </Layout> 
       </body>
     </html>
   );
