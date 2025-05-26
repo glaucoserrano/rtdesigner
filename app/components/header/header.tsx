@@ -14,7 +14,7 @@ export const Header = () =>{
 
     return(
         <>
-        <header className="bg-pink-100 py-4 px-6 shadow-sm">
+        <header className="bg-pink-100 py-4 px-6 shadow-sm ">
             <div className="container 
                 max-w-6xl 
                 mx-auto flex items-center justify-between"

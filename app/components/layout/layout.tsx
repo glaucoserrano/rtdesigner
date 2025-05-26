@@ -1,5 +1,6 @@
 import {Inter} from 'next/font/google';
 import { Header } from '../header';
+import { Footer } from '../footer';
 
 type LayoutProps = {
   children: React.ReactNode;
@@ -12,8 +13,9 @@ export const Layout = ({ children }: LayoutProps) => (
         flex-col
         ${inter.className}
         min-h-screen
-        bg-pink-200`}>
+        `}>
           <Header />
             {children}
+          <Footer />
         </div>
 )
